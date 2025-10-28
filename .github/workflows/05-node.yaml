@@ -1,0 +1,25 @@
+name: Pipeline Node.js
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    name: Job 1 Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Passo 1 - Task de Checkout
+        uses: actions/checkout@v5
+      
+      - name: Passo2 - Task de Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Passo 3 - Task de Install Dependencias
+        run: echo "npm install"
+
+      - name: Passo $ - Task de Run Testes
+        run: echo "npm run test"
