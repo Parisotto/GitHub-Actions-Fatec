@@ -1,5 +1,5 @@
 name: Pipeline Experimental
-on: pull_request
+on: [pull_request, push]
 jobs: 
   ci-continious-intagracion:
     name: Teste de CI
@@ -9,7 +9,5 @@ jobs:
         name: Mensagem Especial
       - uses: actions/checkout@v5
         name: Fazendo clone e checkout no meu repositório nesta máquina virtual
-      - name: Zipar os arquivos do meu repositório
-        run: zip -r arquivo.zip .
-      - name: Listar os arquivos do meu repositório
-        run: ls -la
+      - name: Bom tarde!
+        run: echo "Fatec ZS"
