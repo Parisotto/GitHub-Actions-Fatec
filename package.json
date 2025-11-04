@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts":{
-    "test": "echo 'Tests running...'"
+    "test": "echo 'Tests running...'",
+    "build": "echo 'Build running",
+    "deploy": "echo 'Deploing na Azure Cloud'"
   },
   "repository": {
     "type":"git",
