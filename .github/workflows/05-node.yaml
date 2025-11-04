@@ -28,10 +28,10 @@ jobs:
     name: Job 2 Build
     runs-on: ubuntu-latest
     steps:
-      - run: npm run build
+      - run: echo "npm run build"
 
   deploy:
     name: Job 3 Deploy
     runs-on: ubuntu-latest
     steps:
-      - run: npm run deploy
+      - run: echo "npm run deploy"
