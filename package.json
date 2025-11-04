@@ -1,0 +1,20 @@
+{
+  "name": "github-actions",
+  "version":"1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts":{
+    "test": "echo 'Tests running...'"
+  },
+  "repository": {
+    "type":"git",
+    "url": "git+https://github.com/Parisotto/GitHub-Actions.git"
+  },
+  "keywords": [],
+  "author": "Parisotto",
+  "license":"ISC",
+  "bugs": {
+    "url":"https://github.com/Parisotto/GitHub-Actions.git/issues"
+  },
+  "homepage": "https://github.com/Parisotto/GitHub-Actions.git#readme"
+}
