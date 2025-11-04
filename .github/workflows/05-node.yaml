@@ -27,11 +27,13 @@ jobs:
   build:
     name: Job 2 Build
     runs-on: ubuntu-latest
+    needs: testes
     steps:
       - run: echo "npm run build"
 
   deploy:
     name: Job 3 Deploy
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - run: echo "npm run deploy"
