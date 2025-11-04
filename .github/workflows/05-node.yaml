@@ -6,8 +6,8 @@ on:
       - develop
 
 jobs:
-  build:
-    name: Job 1 Build
+  testes:
+    name: Job 1 Teste
     runs-on: ubuntu-latest
     steps:
       - name: Passo 1 - Task de Checkout
@@ -24,5 +24,14 @@ jobs:
       - name: Passo 4 - Task de Run Testes
         run: npm run test
 
+  build:
+    name: Job 2 Build
+    runs-on: ubuntu-latest
+    steps:
       - run: npm run build
+
+  deploy:
+    name: Job 3 Deploy
+    runs-on: ubuntu-latest
+    steps:
       - run: npm run deploy
