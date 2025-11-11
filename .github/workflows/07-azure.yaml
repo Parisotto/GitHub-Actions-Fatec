@@ -41,3 +41,28 @@ jobs:
         run: |
           npm test
           echo "testes executados"
+
+      - name: Upload artefato para tarefa de implantação
+        uses: actions/upload-artifact@v4
+        with:
+          name: node-app
+          path: .
+          
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artefeto do job build
+        uses: actions/download-artifact@v4
+        with:
+          name: node-app
+
+      - name: Login no Azure
+        run: echo LOGADO
+
+      - name: Deploy no Azure Web App
+        id: deploy-to-webapp
+        run: echo EM PRODUÇÃO
+
+      
