@@ -1,22 +1,25 @@
 {
-  "name": "github-actions",
-  "version":"1.0.0",
-  "description": "",
+  "name": "github-actions-demo",
+  "version": "1.0.0",
+  "description": "Exemplo didático de integração entre GitHub Actions e Azure App Service com Node.js e Express.",
   "main": "index.js",
-  "scripts":{
-    "test": "echo 'Tests running...'",
-    "build": "echo 'Build running'",
-    "deploy": "echo 'Deploing na Azure Cloud'"
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"✅ Testes executados com sucesso!\"",
+    "build": "echo \"🏗️ Simulando build do projeto...\"",
+    "deploy": "echo \"🚀 Simulando deploy para o Azure App Service...\""
+  },
+  "author": "Edson Parisotto",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
   },
   "repository": {
-    "type":"git",
-    "url": "git+https://github.com/Parisotto/GitHub-Actions.git"
+    "type": "git",
+    "url": "https://github.com/Parisotto/GitHub-Actions.git"
   },
-  "keywords": [],
-  "author": "Parisotto",
-  "license":"ISC",
   "bugs": {
-    "url":"https://github.com/Parisotto/GitHub-Actions.git/issues"
+    "url": "https://github.com/Parisotto/GitHub-Actions/issues"
   },
-  "homepage": "https://github.com/Parisotto/GitHub-Actions.git#readme"
+  "homepage": "https://github.com/Parisotto/GitHub-Actions#readme"
 }
