@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: echo "O job disparou um ${{ github.event_name }} evento"
       - run: echo "Rodando em um ${{ runner.os }} servidor"
-      - run: echo "O nome da branch é ${{ github.ref }} do repositóri ${{ github.repository }}"
+      - run: echo "O nome da branch é ${{ github.ref }} do repositório ${{ github.repository }}"
 
       - name: Check out no repositório do código
         uses: actions/checkout@v4
