@@ -65,6 +65,10 @@ jobs:
 
       - name: Deploy no Azure Web App
         id: deploy-to-webapp
-        run: echo EM PRODUÇÃO
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: fatec-teste
+          slot-name: 'Production'
+          package: .
 
       
