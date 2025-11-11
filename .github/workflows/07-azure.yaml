@@ -59,7 +59,9 @@ jobs:
           name: node-app
 
       - name: Login no Azure
-        run: echo LOGADO
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Deploy no Azure Web App
         id: deploy-to-webapp
