@@ -1,10 +1,21 @@
 name: Aula Workflow Manual
 
 on: 
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
+  # schedule:
+  #     - cron: '0 2 * * *'
   workflow_dispatch:
+    inputs:
+      rodar_testes:
+        description: 'Rodar testes antes do deploy?'
+        required: true
+        default: 'sim'
+        type: choice
+        options:
+          - sim
+          - nao
 
 jobs:
   build:
