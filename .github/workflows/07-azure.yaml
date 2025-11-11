@@ -11,7 +11,7 @@ on:
       rodar_testes:
         description: 'Rodar testes antes do deploy?'
         required: true
-        default: 'sim'
+        default: 'nao'
         type: choice
         options:
           - sim
@@ -24,4 +24,20 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
-        
+
+      - name: Configura versão do Node.js 
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.x'        
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar build
+        run: npm run build
+
+      - name: Rodar testes
+        if: ${{ github.event.inputs.rodar_testes == 'sim' }}
+        run: |
+          npm test
+          echo "testes executados"
