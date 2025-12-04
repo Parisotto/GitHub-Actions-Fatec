@@ -3,20 +3,20 @@ run-name: Running - ${{ github.event_name }}
 on:
   push:
     # branches:
-    #   - master
+    #  - tests
+    #  - master
     branches-ignore:
       - main
       - develop
       - 'release/**'
     paths:
       - '**.txt'
-      - '**.test'
 
 jobs:
   on-push:
     runs-on: ubuntu-latest
     steps:
-      - name: Cometário
+      - name: Comentário
         run: |
-          echo "Comentário PUSH WORKFLOW - Path"
-          echo "Executado!"
+          echo "Comentário PUSH WORKFLOW - path"
+          echo "Executando"
