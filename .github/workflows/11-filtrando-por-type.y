@@ -8,6 +8,7 @@ on:
       - closed
     branches:
       - main
+      - develop
     paths:
       - '**.md'
 
