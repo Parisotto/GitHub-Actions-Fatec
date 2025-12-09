@@ -3,7 +3,7 @@ run-name: Running - Workflow run Requested Template
 on:
   workflow_run:
     workflows: [Trigger]
-    types: [requested, completed]
+    types: [requested]
 
 jobs:
   quando_Trigger_for_disparado:
