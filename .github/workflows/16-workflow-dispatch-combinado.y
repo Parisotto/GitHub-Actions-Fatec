@@ -6,10 +6,7 @@ on:
       tags:
         description: Selecione a tag
         type: choice
-        options:
-          - tag1
-          - tag2
-          - tag3
+        options: [tag1, tag2, tag3]
         default: tag1
         required: true
       resposta:

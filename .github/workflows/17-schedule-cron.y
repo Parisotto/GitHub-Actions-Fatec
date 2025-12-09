@@ -17,8 +17,4 @@ jobs:
   teste_schedule:
     runs-on: ubuntu-latest
     steps:
-      - name: Pular as segundas e quartas-feiras
-        if: github.event.schedule != '30 5 * * 1,3'
-        run: echo "Este passo nao será executado no segundo e no terceiro cron"
-      - name: Todas as vezes
-        run: echo "Já este passo sermpre será executado"
+      - run: echo "Já este passo sermpre será executado"

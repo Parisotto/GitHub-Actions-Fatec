@@ -1,0 +1,9 @@
+name: Trigger
+run-name: Running - Trigger
+on: [push, workflow_dispatch]
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: echo "Trigger finalizado"
