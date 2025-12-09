@@ -3,7 +3,7 @@ run-name: Running - Workflow run Combinado Template
 on:
   workflow_run:
     workflows: [Trigger]
-    types: [in_progress]
+    types: [requested, in_progress, completed]
 
 jobs:
   quando_Trigger_for_disparado:
